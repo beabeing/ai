@@ -154,17 +154,52 @@ nav ul li#about-link {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 20px;
 }
 
 #science > #science-number {
-    background-color: black;
+    background-color: #ECEBE0;
     color: white;
     margin-left:-10px;
 }
 
+#science-number > h1{
+    font-size: 300px;
+}
+
 #science > #science-content {
-    background-color: black;
+    background-color: #92DAFF;
     color: white;
+}
+nav ul li img {
+    height: 40px;
+}
+nav ul li:nth-child(2) {
+    margin-left: auto;
+}
+#science-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.portofolio-title {
+    font-size: 50px;
+    color: black;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 100;
+    margin: 10px;
+    position: relative;
+    top: -20px;
+}
+#squre {
+    background-color: #FFF856;
+    width: 60%;
+    height: 50%;
+}
+#header-bottom img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
 }
 
 footer {
@@ -212,7 +247,7 @@ footer {
     #science > #science-number {
         margin-top: -20px;
         margin-left:20px;
-    }
+    }   
 }
 @media (min-width: 1024px) {
    #title-sidebar {
@@ -236,6 +271,12 @@ footer {
    #about-link {
     display: none;
    }
+   #science > #science-number, #science > #science-content {
+    height: 500px;}
+
+    #science{
+        height: 540px;
+    }
 }
 
 @keyframes circleMove {
