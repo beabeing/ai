@@ -1,0 +1,217 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+header, main, footer {
+    width: 100vw;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#header-top {
+    display: grid;
+    grid-template-rows: 2fr 8fr;
+    background-color: #B7B12A;
+    width: 100vw;
+    height: 64vh;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#header-bottom {
+    background-color: #B7B12A;
+    width: 100%;
+    height: 36vh;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap');
+    color: black;
+    font-size: 100px;
+    font-weight: 800;
+    font-style: normal;
+    font-family: 'Syne', sans-serif;
+    line-height: 80%;
+    flex-shrink: 0;
+}
+
+#second-line {
+    margin-top: -60px;
+}
+
+nav {
+    margin: 10px 20px; 
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    width: 100%;
+    color: white;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    border: 1px dashed white;
+    padding: 5px;
+    text-decoration: none;
+    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap');
+    font-family: 'Syne', sans-serif;
+    font-weight: 730;
+    font-size: 16px;
+    
+}
+
+nav ul li#about-link {
+    margin-left: 20px;
+    color: white;
+    font-size: 24px;
+}
+
+#title {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+#title div {
+    width: 100%;
+    text-align: center;
+}
+
+#sidebar {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#close-sidebar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#flow-image {
+    height: 100%;
+    width: auto;
+    animation: circleMove 10s linear infinite;
+}
+
+.flow-image-container {
+    position: absolute;
+    top: 50vh;
+    left: 0;
+    height: 30%;
+    width: auto;
+}
+
+main {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+    header, main, footer {
+        padding: 10px;
+    }
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 10px;
+        
+        
+    }
+    nav a {
+        text-decoration: none;
+        
+    }
+    h1{
+        font-size: 50px;
+        line-height: 130%;
+    }
+    #header-top {
+        height: 35vh;
+    }
+    #header-bottom {
+        height: 20vh;
+    }
+    .flow-image-container  {
+        top: 25vh;
+    }
+}
+@media (min-width: 1024px) {
+   #title-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+   }
+   #sidebar {
+    display: grid;
+    align-items: center;
+    position: static;
+    width: 90%;
+    height: 90%;
+    background-color: #B7B12A;
+    border: 1px dashed white;
+   }
+   #close-sidebar {
+    display: none;
+   }
+   #about-link {
+    display: none;
+   }
+}
+
+@keyframes circleMove {
+    0% {
+        transform: translate(0, -20px);
+    }
+    25% {
+        transform: translate(20vw, 20px);
+    }
+    50% {
+        transform: translate(40vw, -20px);
+    }
+    75% {
+        transform: translate(60vw, 20px);
+    }
+    100% {
+        transform: translate(80vw, -20px);
+    }
+}
+
