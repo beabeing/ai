@@ -131,11 +131,40 @@ nav ul li#about-link {
     width: auto;
 }
 
-main {
-    flex: 1;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+#portofolio {
+    width: 100vw;
+    height: 580px;
+    margin: 0px;
+    gap: 20px;
+    background-color: white;
+}
+#science {
+    width: 100%;
+    height: 300px;
+    background-color: #B7B12A;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#science > #science-number, #science > #science-content {
+    height: 260px;
+    margin-top: 20px;
+    margin-right:20px;
+    margin-left:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#science > #science-number {
+    background-color: black;
+    color: white;
+    margin-left:-10px;
+}
+
+#science > #science-content {
+    background-color: black;
+    color: white;
 }
 
 footer {
@@ -175,6 +204,14 @@ footer {
     }
     .flow-image-container  {
         top: 25vh;
+    }
+    #science {
+        grid-template-columns: 1fr;
+        height:600px;
+    }
+    #science > #science-number {
+        margin-top: -20px;
+        margin-left:20px;
     }
 }
 @media (min-width: 1024px) {
