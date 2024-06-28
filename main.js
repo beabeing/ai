@@ -13,6 +13,12 @@ var mainImage = document.getElementById('flow-image');
 mainImage.addEventListener('mouseenter', function() {
     mainImage.style.animationPlayState = 'paused';
 });
-mainImage.addEventListener('mouseleave', function() {
-    mainImage.style.animationPlayState = 'running';
-});
+
+if(window.innerWidth < 800){
+    mainImage.addEventListener('click', function() {
+        mainImage.style.animationPlayState = 'running';
+});}else{
+    mainImage.addEventListener('mouseleave', function() {
+        mainImage.style.animationPlayState = 'running';
+    });
+}
