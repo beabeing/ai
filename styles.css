@@ -9,8 +9,39 @@ body {
     min-height: 100vh;
     background-color: #f0f0f0;
 }
+#flow-content{
+    width: 100vw;
+    height: 30px;
+    background-color: #ECEBE0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10px;
+    gap:40px;
+}
+#flow-content p{
+    font-size: 16px;
+    color: black;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 100;
+    animation: moveLeftToRight 4s linear infinite;
+}
 
-header, main, footer {
+@keyframes moveLeftToRight {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+#flow-content p::before{
+    content: '😊';
+}
+
+header, footer {
     width: 100vw;
     padding: 20px;
     box-sizing: border-box;
