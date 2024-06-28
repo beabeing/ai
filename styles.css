@@ -19,6 +19,9 @@ body {
     margin-top: -10px;
     gap:40px;
 }
+#flow-content-3{
+    display: none;
+}
 #flow-content p{
     width: 100%;
     font-size: 16px;
@@ -242,6 +245,9 @@ footer {
 }
 
 @media (max-width: 768px) {
+    #flow-content-2, #flow-content-3{
+        display: none;
+    }
     header, main, footer {
         padding: 10px;
     }
@@ -282,6 +288,9 @@ footer {
     }   
 }
 @media (min-width: 1024px) {
+    #flow-content-3{
+        display: block;
+    }
    #title-sidebar {
     display: grid;
     grid-template-columns: 1fr 1fr;
